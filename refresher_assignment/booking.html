@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<body onload="onLoad()">
+    <script src="./js/booking.js"></script>
+    <h2>Schedule pick-up</h2>
+    <form onsubmit="onBook()" action="./bookingConfirmation.html">
+        <label for="iStudentId">Student Id:</label>
+        <input type="text" id="iStudentId" required="required" readonly><br><br>
+        <label for="iStudentName">Student name:</label>
+        <input type="text" id="iStudentName" readonly><br><br>
+        <label for="iStudentEmail">Student email:</label>
+        <input type="email"required="required" id="iStudentEmail" readonly><br><br>
+        <label for="iStudentPhoneNumber">Mobile no:</label>
+        <input type="text" id="iStudentPhoneNumber"><br><br>
+        <label for="iTravelDateTime">Pickup date-time:</label>
+        <input type="datetime-local" required="required" id="iTravelDateTime"><br><br>
+        <label for="iStudentAddress">Pick-up Address:</label>
+        <input type="text" id="iStudentAddress"><br><br>
+        <label for="iLocation">Pick-up location</label>
+        <input type="text" id="iLocation">
+        <input type="button" onclick="onLocate()" value="locate"><br><br>
+        <input type="submit" value="Book">
+    </form>
+</body>
+
+</html>
