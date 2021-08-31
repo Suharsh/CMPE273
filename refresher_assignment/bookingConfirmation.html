@@ -4,11 +4,15 @@
 <body>
     <script src="./js/logout.js"></script>
     <script src="./js/bookingConfirmation.js"></script>
-    <h2>Booking Confirmed!</h2>
-    <form onsubmit="onLogout()" action="./index.html">
-        <p>Your booking has been confirmed. Your trip details will be shared 3hrs before your pick-up time to your mail id</p>
-        <button type="submit">Logout</button>
-    </form>
+    <link rel="stylesheet" href="./css/styles.css">
+    <div class="login">
+        <h1>Booking Confirmed!</h1>
+        <form onsubmit="onLogout()" action="./index.html">
+            <p>Your booking has been confirmed. Your trip details will be shared 3hrs before your pick-up time to your
+                mail id</p>
+            <button class="btn btn-primary btn-block btn-large" type="submit">Logout</button>
+        </form>
+    </div>
 </body>
 
 </html>
