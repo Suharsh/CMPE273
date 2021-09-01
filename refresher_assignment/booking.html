@@ -8,20 +8,20 @@
         <h1>Schedule pick-up</h1>
         <form onsubmit="onBook()" action="./bookingConfirmation.html">
             <label for="iStudentId">Student Id:</label>
-            <input type="text" id="iStudentId" required="required" readonly>
+            <input type="text" id="iStudentId" readonly>
             <label for="iStudentName">Student name:</label>
             <input type="text" id="iStudentName" readonly>
             <label for="iStudentEmail">Student email:</label>
             <input type="email" required="required" id="iStudentEmail" readonly>
             <label for="iStudentPhoneNumber">Mobile no:</label>
-            <input type="text" id="iStudentPhoneNumber">
+            <input type="text" id="iStudentPhoneNumber" required autofocus>
             <label for="iTravelDateTime">Pickup date-time:</label>
-            <input type="datetime-local" required="required" id="iTravelDateTime">
+            <input type="datetime-local" required id="iTravelDateTime">
             <label for="iStudentAddress">Pick-up Address:</label>
-            <input type="text" id="iStudentAddress">
+            <input type="text" id="iStudentAddress" required>
             <label for="iLocation">Pick-up location</label>
-            <input type="text" id="iLocation">
-            <input type="button" onclick="onLocate()" id="bLocate" class="btn-primary" value="locate" width="28%!important"><br><br>
+            <input type="text" id="iLocation" readonly>
+            <input type="button" onclick="onLocate()" id="bLocate" class="btn-primary" value="Locate me" width="28%!important"><br><br>
             <input type="submit" class="btn btn-primary btn-block btn-large" value="Book">
         </form>
     </div>

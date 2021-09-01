@@ -8,16 +8,16 @@
         <h1>Student Registration</h1>
         <form onsubmit="onRegister()" action="./studentLogin.html">
             <label for="iStudentId">Student Id:</label>
-            <input id="iStudentId">
+            <input type="number" required autofocus id="iStudentId">
             <label for="iStudentName">Student name:</label>
-            <input type="text" id="iStudentName">
-            <label for="iPhoneNumber">Mobile no</label>
-            <input type="text" id="iStudentPhoneNumber">
+            <input type="text" required id="iStudentName">
+            <label for="iPhoneNumber">Mobile no: (xxx) xxx-xxxx</label>
+            <input type="text" pattern="^(\([0-9]{3}\) |[0-9]{3}-)[0-9]{3}-[0-9]{4}$" id="iStudentPhoneNumber">
             <label for="iStudentEmail">Student email:</label>
-            <input type="email" required="required" id="iStudentEmail">
+            <input type="email" required id="iStudentEmail">
             <label for="password">Password:</label>
-            <input type="password" id="iStudentPassword"><br><br>
-            <input type="submit" class="btn btn-primary btn-block btn-large" value="Register">
+            <input type="password" required id="iStudentPassword"><br><br>
+            <input type="submit" required class="btn btn-primary btn-block btn-large" value="Register">
         </form>
     </div>
 </body>
