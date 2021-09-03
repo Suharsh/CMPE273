@@ -23,7 +23,7 @@ const isUserPasswordValid = (studentEmail, studentPassword) => {
 const resetUserLogin = (event) => {
    event.preventDefault();
    document.getElementById("iStudentEmail").value = "";
-   documenßt.getElementById("iStudentPassword").value = "";
+   document.getElementById("iStudentPassword").value = "";
 }
 
 const setLoginUser = (studentEmail) => {
