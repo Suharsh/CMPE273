@@ -1,4 +1,4 @@
-onBook = () => {
+const onBook = () => {
 
     const sessionStorage = window.sessionStorage;
     const localStorage = window.localStorage;
@@ -9,7 +9,7 @@ onBook = () => {
     localStorage.setItem(studentEmail, JSON.stringify(storedStudentDetails));
     sessionStorage.setItem(studentEmail, JSON.stringify(bookingDetails));
 }
-getBookingDetails = () => {
+const getBookingDetails = () => {
     let bookingDetails = {
         travelDateTime: document.getElementById('iTravelDateTime').value,
         pickupAddress: document.getElementById('iStudentAddress').value,
@@ -19,7 +19,7 @@ getBookingDetails = () => {
     return bookingDetails;
 }
 
-onLoad = () => {
+const onLoad = () => {
     const sessionStorage = window.sessionStorage;
     const localStorage = window.localStorage;
     let loginUser = sessionStorage.getItem("logInUser")
@@ -36,7 +36,7 @@ onLoad = () => {
     document.getElementById('iTravelDateTime').min = getDateTime();
 }
 
-onLocate = () => {
+const onLocate = () => {
     if (!navigator.geolocation) {
         alert("Unable to determine your current location.Your browser does not support geo-location.")
     }
@@ -46,7 +46,7 @@ onLocate = () => {
     });
 }
 
-getDateTime = () => {
+const getDateTime = () => {
     let today = new Date();
     let date = (today.getDate() < 10 ? '0' : '') + today.getDate();
     let month = ((today.getMonth() + 1) < 10 ? '0' : '') + (today.getMonth() + 1);

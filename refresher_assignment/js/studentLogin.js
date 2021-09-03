@@ -1,5 +1,4 @@
-"use strict"
-onLogin = (event) => {
+const onLogin = (event) => {
    let studentEmail = document.getElementById("iStudentEmail").value;
    let studentPassword = document.getElementById("iStudentPassword").value;
    if (!isRegisteredUser(studentEmail) || !isUserPasswordValid(studentEmail, studentPassword)) {
@@ -10,24 +9,24 @@ onLogin = (event) => {
    setLoginUser(studentEmail);
 }
 
-isRegisteredUser = (studentEmail) => {
+const isRegisteredUser = (studentEmail) => {
    const storedStudentDetails = localStorage.getItem(studentEmail);
    return storedStudentDetails != null;
 }
 
-isUserPasswordValid = (studentEmail, studentPassword) => {
+const isUserPasswordValid = (studentEmail, studentPassword) => {
    const storedStudentDetails = localStorage.getItem(studentEmail);
    const parsedStudentDetails = JSON.parse(storedStudentDetails);
    return storedStudentDetails != null && atob(studentPassword) === parsedStudentDetails.studentPassword;
 }
 
-resetUserLogin = (event) => {
+const resetUserLogin = (event) => {
    event.preventDefault();
    document.getElementById("iStudentEmail").value = "";
    documenßt.getElementById("iStudentPassword").value = "";
 }
 
-setLoginUser = (studentEmail) => {
+const setLoginUser = (studentEmail) => {
    const sessionStorage = window.sessionStorage;
    sessionStorage.setItem("logInUser", studentEmail);
 }

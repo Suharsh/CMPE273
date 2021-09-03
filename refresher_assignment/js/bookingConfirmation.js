@@ -1,4 +1,4 @@
-onload = () => {
+const onload = () => {
     const sessionStorage = window.sessionStorage;
     let loginUser = sessionStorage.getItem("logInUser")
     if (loginUser == null) {
