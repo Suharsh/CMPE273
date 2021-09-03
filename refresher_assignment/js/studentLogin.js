@@ -17,7 +17,7 @@ const isRegisteredUser = (studentEmail) => {
 const isUserPasswordValid = (studentEmail, studentPassword) => {
    const storedStudentDetails = localStorage.getItem(studentEmail);
    const parsedStudentDetails = JSON.parse(storedStudentDetails);
-   return storedStudentDetails != null && atob(studentPassword) === parsedStudentDetails.studentPassword;
+   return storedStudentDetails != null && btoa(studentPassword) === parsedStudentDetails.studentPassword;
 }
 
 const resetUserLogin = (event) => {

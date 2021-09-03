@@ -10,7 +10,7 @@ const getStudentRegistrationDetails = () => {
     let studentEmail = document.getElementById("iStudentEmail").value;
     let studentId = document.getElementById("iStudentId").value;
     let studentName = document.getElementById("iStudentName").value;
-    let studentPassword = atob(document.getElementById("iStudentPassword").value);
+    let studentPassword = btoa(document.getElementById("iStudentPassword").value);
     let studentPhoneNumber = document.getElementById("iStudentPhoneNumber").value;
     let studentDetails = {
         studentId: studentId,

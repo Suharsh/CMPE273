@@ -53,7 +53,6 @@ const getDateTime = () => {
     let year = today.getFullYear();
     let hrs = today.getHours();
     let min = today.getMinutes();
-    let sec = today.getSeconds();
-    let currentDateTime = year + "-" + month + "-" + date + "T" + hrs + ":" + min + ":" + sec;
+    let currentDateTime = year + "-" + month + "-" + date + "T" + hrs + ":" + min;
     return currentDateTime;
 }
