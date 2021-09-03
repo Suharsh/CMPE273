@@ -1,12 +1,12 @@
 onRegister = () => {
     const localStorage = window.localStorage;
     let studentDetails = getStudentRegistrationDetails();
-    if(isUserAlreadyRegistered(studentDetails))
-      alert("User is already registered with the email id");
+    if (isUserAlreadyRegistered(studentDetails))
+        alert("User is already registered with the email id");
     localStorage.setItem(studentDetails.studentEmail, JSON.stringify(studentDetails));
 }
 
-getStudentRegistrationDetails=()=>{
+getStudentRegistrationDetails = () => {
     let studentEmail = document.getElementById("iStudentEmail").value;
     let studentId = document.getElementById("iStudentId").value;
     let studentName = document.getElementById("iStudentName").value;
@@ -18,12 +18,12 @@ getStudentRegistrationDetails=()=>{
         studentPhoneNumber: studentPhoneNumber,
         studentEmail: studentEmail,
         studentPassword: studentPassword,
-        bookingDetails:[]
+        bookingDetails: []
     };
     return studentDetails;
 }
 
-isUserAlreadyRegistered=(studentDetails)=>{
+isUserAlreadyRegistered = (studentDetails) => {
     const storedStudentDetails = localStorage.getItem(studentDetails.studentEmail);
-    return storedStudentDetails!=null
+    return storedStudentDetails != null
 }
