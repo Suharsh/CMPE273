@@ -9,6 +9,13 @@ const onLogin = (event) => {
    setLoginUser(studentEmail);
 }
 
+const onLoad = () => {
+   let loginUser = sessionStorage.getItem("logInUser")
+    if (loginUser!=null) {
+        window.open("booking.html", "_self");
+    }
+}
+
 const isRegisteredUser = (studentEmail) => {
    const storedStudentDetails = localStorage.getItem(studentEmail);
    return storedStudentDetails != null;

@@ -7,13 +7,13 @@
         <h1>Schedule pick-up</h1>
         <form onsubmit="onBook()" action="./bookingConfirmation.html">
             <label for="iStudentId">Student Id:</label>
-            <input type="text" id="iStudentId" readonly>
+            <input type="number" id="iStudentId" readonly>
             <label for="iStudentName">Student name:</label>
             <input type="text" id="iStudentName" readonly>
             <label for="iStudentEmail">Student email:</label>
-            <input type="email" required="required" id="iStudentEmail" readonly>
+            <input type="email" required id="iStudentEmail" readonly>
             <label for="iStudentPhoneNumber">Mobile no:</label>
-            <input type="text" id="iStudentPhoneNumber" required autofocus>
+            <input type="text" id="iStudentPhoneNumber" pattern="^(\([0-9]{3}\) |[0-9]{3}-)[0-9]{3}-[0-9]{4}$" required autofocus>
             <label for="iTravelDateTime">Pickup date-time:</label>
             <input type="datetime-local" min="2021-08-06T22:22:55" required id="iTravelDateTime">
             <label for="iStudentAddress">Pick-up Address:</label>
