@@ -1,4 +1,4 @@
 const onLogout = () => {
     const sessionStorage = window.sessionStorage;
-    sessionStorage.removeItem("loginUser");
+    sessionStorage.removeItem("logInUser");
 }
